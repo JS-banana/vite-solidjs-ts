@@ -1,0 +1,79 @@
+@import "./styles/index.less";
+
+body {
+  margin: 0;
+}
+
+// container
+.App {
+  height: 100%;
+  overflow-y: auto;
+  background-color: @bg-color;
+  padding: 20px;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+// header
+.header {
+  display: flex;
+  justify-content: space-between;
+  & > div {
+    &:first-child {
+      .font(18px,@black,600,28px);
+    }
+    &:last-child {
+      .font(14px,@subtitle-color,500,22px);
+      span {
+        color: @text-color;
+        margin-left: 8px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+// list
+.list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  li {
+    height: 108px;
+    padding: 16px 25px;
+    background-color: white;
+    list-style-type: none;
+    .label {
+      .font();
+    }
+    .value {
+      .font(30px,@black,500,38px);
+      margin-top: 4px;
+    }
+    &:first-child .value {
+      color: @blue;
+    }
+  }
+}
+
+// distribution
+.distribution {
+  height: 331px;
+  background-color: white;
+  padding: 24px;
+}
+
+// doughnutBox
+.doughnutBox {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  & > div {
+    height: 376px;
+    padding: 24px;
+    background-color: white;
+  }
+}
