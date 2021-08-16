@@ -1,4 +1,4 @@
-import { onMount } from "solid-js"
+import { onMount, onCleanup } from "solid-js"
 import type { Component } from "solid-js"
 import cls from "../../index.module.less"
 import echarts, { ECOptionBar } from "../../utils/echart"
@@ -7,7 +7,7 @@ import { MonthProps } from "../../typings"
 // Distribution
 const Distribution: Component<{ data: MonthProps[] }> = (props) => {
   let container: null | HTMLDivElement = null
-
+  let instance
   // 人员流动分析
   const Distribution_Option: ECOptionBar = {
     title: {
@@ -77,7 +77,14 @@ const Distribution: Component<{ data: MonthProps[] }> = (props) => {
     ],
   }
   onMount(() => {
-    echarts.init(container).setOption(Distribution_Option)
+    instance = echarts.init(container)
+    instance.setOption(Distribution_Option)
+    // 窗口自适应
+    window.addEventListener("resize", () => instance?.resize())
+  })
+
+  onCleanup(() => {
+    window.removeEventListener("resize", () => instance?.resize())
   })
 
   return (
