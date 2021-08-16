@@ -50,6 +50,7 @@ body {
     }
     .value {
       .font(30px,@black,500,38px);
+      font-family: SFUIText-Medium, SFUIText;
       margin-top: 4px;
     }
     &:first-child .value {
@@ -62,7 +63,20 @@ body {
 .distribution {
   height: 331px;
   background-color: white;
-  padding: 24px;
+  position: relative;
+  .cavansBox {
+    height: 331px;
+    padding: 24px;
+  }
+  .year {
+    position: absolute;
+    right: 26px;
+    top: 21px;
+    .font(14px,@subtitle-color,400,22px);
+    span {
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
 }
 
 // doughnutBox

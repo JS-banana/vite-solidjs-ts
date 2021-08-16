@@ -10,12 +10,14 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^16.6.1",
     "less": "^4.1.1",
     "vite": "^2.4.4",
     "vite-plugin-solid": "^2.0.1"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "chart.js": "^3.5.0",
     "echarts": "^5.1.2",
     "solid-js": "^1.0.7"
   }

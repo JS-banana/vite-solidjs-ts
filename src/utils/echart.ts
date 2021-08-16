@@ -19,6 +19,7 @@ import type {
   TitleComponentOption,
   DatasetComponentOption,
   TooltipComponentOption,
+  GridComponentOption,
 } from "echarts/components"
 
 // 注册必须的组件
@@ -40,6 +41,7 @@ export type ECOptionBar = echarts.ComposeOption<
   | LegendComponentOption
   | DatasetComponentOption
   | TooltipComponentOption
+  | GridComponentOption
 >
 export type ECOptionPie = echarts.ComposeOption<
   | PieSeriesOption
@@ -47,6 +49,7 @@ export type ECOptionPie = echarts.ComposeOption<
   | LegendComponentOption
   | DatasetComponentOption
   | TooltipComponentOption
+  | GridComponentOption
 >
 
 export default echarts

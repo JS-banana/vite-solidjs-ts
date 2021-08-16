@@ -1,7 +1,9 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/node': ^16.6.1
   axios: ^0.21.1
+  chart.js: ^3.5.0
   echarts: ^5.1.2
   less: ^4.1.1
   solid-js: ^1.0.7
@@ -10,10 +12,12 @@ specifiers:
 
 dependencies:
   axios: 0.21.1
+  chart.js: 3.5.0
   echarts: 5.1.2
   solid-js: 1.0.7
 
 devDependencies:
+  '@types/node': 16.6.1
   less: 4.1.1
   vite: 2.4.4
   vite-plugin-solid: 2.0.1
@@ -310,6 +314,10 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
+  /@types/node/16.6.1:
+    resolution: {integrity: sha512-Sr7BhXEAer9xyGuCN3Ek9eg9xPviCF2gfu9kTfuU2HkTVAMYSDeX40fvpmo72n5nansg3nsBjuQBrsS28r+NUw==}
+    dev: true
+
   /ansi-styles/3.2.1:
     resolution: {integrity: sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==}
     engines: {node: '>=4'}
@@ -367,6 +375,10 @@ packages:
       escape-string-regexp: 1.0.5
       supports-color: 5.5.0
     dev: true
+
+  /chart.js/3.5.0:
+    resolution: {integrity: sha512-J1a4EAb1Gi/KbhwDRmoovHTRuqT8qdF0kZ4XgwxpGethJHUdDrkqyPYwke0a+BuvSeUxPf8Cos6AX2AB8H8GLA==}
+    dev: false
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
